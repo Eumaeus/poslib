@@ -232,7 +232,7 @@ package poslib {
 				case None => ""
 			}
 		}
-		val commaString:String = s"Part of Speech: ${posStr}${personStr}${numberStr}${tenseStr}${voiceStr}${moodStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
+		val commaString:String = s"${posStr}${personStr}${numberStr}${tenseStr}${voiceStr}${moodStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
 
 		commaString.takeRight(2) match {
 			case ", " => commaString.dropRight(2)
