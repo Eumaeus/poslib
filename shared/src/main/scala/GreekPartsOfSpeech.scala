@@ -27,12 +27,20 @@ package poslib {
   		def posFromTag(postag:String):GreekPartOfSpeech = {
   			val tags:Vector[Char] = postag.toVector
 
+  			if (tags.size < 9){
+  				throw new PosException(s"""'${postag}' has only ${tags.size} elements, instead of the 9 it should have.""")
+  			}
+  			if (tags.size > 9){
+  				throw new PosException(s"""'${postag}' has ${tags.size} elements, instead of the 9 it should have.""")
+  			}
+
+
 			val posChar:String = tags(0).toString	
 			val personChar:String = tags(1).toString
 			val numberChar:String = tags(2).toString
 			val tenseChar:String = tags(3).toString
-			val voiceChar:String = tags(4).toString
-			val moodChar:String = tags(5).toString
+			val moodChar:String = tags(4).toString
+			val voiceChar:String = tags(5).toString
 			val genderChar:String = tags(6).toString
 			val caseChar:String = tags(7).toString
 			val degreeChar:String = tags(8).toString
@@ -206,8 +214,8 @@ package poslib {
   				personEl,
   				numberEl,
   				tenseEl,	
-  				voiceEl,
   				moodEl,
+  				voiceEl,
   				genderEl,		
   				caseEl,
   				degreeEl

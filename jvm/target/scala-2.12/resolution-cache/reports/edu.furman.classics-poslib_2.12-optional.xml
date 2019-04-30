@@ -4,10 +4,10 @@
 	<info
 		organisation="edu.furman.classics"
 		module="poslib_2.12"
-		revision="0.1.0"
+		revision="2.0.0"
 		conf="optional"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, tut"
-		date="20180822051626"/>
+		date="20190430124728"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

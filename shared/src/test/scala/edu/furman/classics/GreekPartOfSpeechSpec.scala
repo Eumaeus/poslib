@@ -29,13 +29,13 @@ class GreekPartOfSpeechSpec extends FlatSpec {
         Some(PosElement("1st","First Person",'1')),
         Some(PosElement("sg","Singular",'s')),
         Some(PosElement("pr","Present",'p')),
-        Some(PosElement("act","Active",'a')),
         Some(PosElement("ind","Indicative",'i')),
+        Some(PosElement("act","Active",'a')),
         Some(PosElement("none","None",'-')),
         Some(PosElement("none","None",'-')),
         Some(PosElement("none","None",'-'))
     )
-    assert( pos.toPosTag == "v1spai---")
+    assert( pos.toPosTag == "v1spia---")
   }
 
   it should "fail on an invalid pos" in {

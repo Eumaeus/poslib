@@ -15,8 +15,8 @@ package poslib {
 	person:Option[PosElement],
 	number:Option[PosElement],
 	tense:Option[PosElement],
-	voice:Option[PosElement],
 	mood:Option[PosElement],
+	voice:Option[PosElement],
 	gender:Option[PosElement],
 	grammaticalcase:Option[PosElement],
 	degree:Option[PosElement]
@@ -174,7 +174,7 @@ package poslib {
 				case None => '-'
 			}
 		}
-		s"${posStr}${personStr}${numberStr}${tenseStr}${voiceStr}${moodStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
+		s"${posStr}${personStr}${numberStr}${tenseStr}${moodStr}${voiceStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
 	}
 
 	def toLabel:String = {
@@ -232,7 +232,7 @@ package poslib {
 				case None => ""
 			}
 		}
-		val commaString:String = s"${posStr}${personStr}${numberStr}${tenseStr}${voiceStr}${moodStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
+		val commaString:String = s"${posStr}${personStr}${numberStr}${tenseStr}${moodStr}${voiceStr}${genderStr}${grammaticalcaseStr}${degreeStr}"
 
 		commaString.takeRight(2) match {
 			case ", " => commaString.dropRight(2)
